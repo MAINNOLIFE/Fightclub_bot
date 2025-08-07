@@ -20,7 +20,7 @@ def generate_card_image(data):
     img.paste(user_photo, (20, 20))
 
     # اثر انگشت
-    fingerprint = Image.open("templates/fingerprint.png").resize((80, 80))
+    fingerprint = Image.open("fingerprint.png").resize((80, 80))
     img.paste(fingerprint, (500, 300))
 
     # نوشتن متن‌ها
