@@ -92,7 +92,9 @@ async def cancel(update, context):
 
 # اجرای بات
 def main():
-    app = ApplicationBuilder().token("توکن_ربات_تو").build()
+    import os
+TOKEN = os.getenv("BOT_TOKEN")
+app = ApplicationBuilder().token(TOKEN).build()
 
     conv = ConversationHandler(
         entry_points=[CommandHandler("start", start)],
